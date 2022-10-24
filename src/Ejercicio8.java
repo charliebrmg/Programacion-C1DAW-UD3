@@ -1,23 +1,23 @@
 /*
 * Comprobación de fechas en el Siglo XXI - C1 FPGS DAW, módulo de Programación - Unidad Didáctica 3, Ejercicio 8
-* Versión 1.0-release
+* Versión 1.1-release
 * @BY Carlos Barranco Moraga - IES Arquitecto Ventura Rodríguez - 2022-10-21
 * Para mejores resultados, compilar con la versión 8 del JDK.
  */
-import java.util.Scanner;
-public class Ejercicio8 {
+import java.util.Scanner;   // Importación de la clase Scanner desde java.util
+public class Ejercicio8 {   // Inicio de la clase pública "Ejercicio8"
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);   // Declaración de variable "teclado" como Scanner de entrada de consola
         System.out.println("Introduzca año:");
-        int aaaa = teclado.nextInt();
+        int aaaa = teclado.nextInt();      // Declaración de variable "aaaa" (año de 4 cifras) como valor entero detectado por "teclado"
         if(aaaa >= 2001 && aaaa <= 2100) {
 //          Si el año introducido por el usuario está entre 2001 y 2100, preguntamos el mes.
             System.out.println("Introduzca mes:");
-            int mm = teclado.nextInt();
+            int mm = teclado.nextInt();     // Declaración de variable "mm" (mes de 2 cifras) como valor entero detectado por "teclado"
             if(mm >= 1 && mm <= 12) {
 //              Si el mes introducido por el usuario está entre 1 y 12, preguntamos el día.
                 System.out.println("Introduzca día:");
-                int dd = teclado.nextInt();
+                int dd = teclado.nextInt(); // Declaración de variable "dd" (día de 2 cifras) como valor entero detectado por "teclado"
                 if((mm == 1 || mm == 3 || mm == 5 || mm == 7 || mm == 8 || mm == 10 || mm == 12) && (dd >= 1 && dd <= 31)) {
 //                  Si el mes es igual a 1, 3, 5, 7, 8, 10, ó 12, y el día introducido está entre 1 y 31, fecha correcta.
                     System.out.println("Fecha válida para el Siglo XXI.");
@@ -40,4 +40,4 @@ public class Ejercicio8 {
             System.out.println("Fecha no válida. (No es un año del Siglo XXI)");
         }
     }
-}
+}   // Fin de la clase "Ejercicio8"
